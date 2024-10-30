@@ -22,7 +22,7 @@ public class DamageIndicator : MonoBehaviour
         }
 
         image.enabled = true;
-        image.color = new Color(1f, 141f / 255f, 153f / 255f);
+        image.color = new Color(1f, 0f / 255f, 0f / 255f);
         coroutine = StartCoroutine(FadeAway());
     }
 
@@ -34,7 +34,7 @@ public class DamageIndicator : MonoBehaviour
         while (a > 0.0f)
         {
             a -= (startAlpha / flashSpeed) * Time.deltaTime;
-            image.color = new Color(1f, 141f / 255f, 153f / 255f, a);
+            image.color = new Color(1f,0f / 255f, 0f / 255f, a);
             yield return null;
         }
 
